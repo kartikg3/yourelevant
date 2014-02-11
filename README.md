@@ -14,3 +14,4 @@ YouRelevant
     - Lists uploader's videos
     - Lists uploader's playlists
     - Option to select and add above videos to user's playlist (new/existing playlist)
+    - Option to select and add above videos to user's Chrome bookmarks

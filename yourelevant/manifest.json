@@ -1,0 +1,30 @@
+{
+  "name" : "YouRelevant",
+  "version" : "0.0.1",
+  "description" : "A relevant YouTube video extension for Chrome",
+  "background" : {
+    "scripts": ["js/vendor/jquery-1.10.1.js", "js/vendor/jquery.xml2json.js", "js/background.js"],
+    "persistent": true
+  },
+  "page_action" :
+  {
+    "default_icon" : "img/icon19.png",
+    "default_title" : "YouRelevant",
+    "default_popup" : "popup.html"
+  },
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://www.youtube.com/watch?*",
+        "https://www.youtube.com/watch?*"
+      ],
+      "js" : ["js/vendor/jquery-1.10.1.js", "js/vendor/jquery.xml2json.js", "js/content.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+  "icons" : {
+    "19" : "img/icon19.png"
+  },
+  "manifest_version": 2
+}
